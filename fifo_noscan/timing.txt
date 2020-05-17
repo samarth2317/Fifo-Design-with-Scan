@@ -1,0 +1,57 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fifo
+Version: K-2015.06-SP5-1
+Date   : Thu Apr 23 18:53:36 2020
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: mem_w_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: mem/mem_reg[31][0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                  0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  mem_w_reg[0]/CP (CFD2QXL)                0.00       0.00 r
+  mem_w_reg[0]/Q (CFD2QXL)                 0.72       0.72 r
+  add_39/U1_1_1/CO (CHA1X1)                0.29       1.01 r
+  add_39/U1_1_2/CO (CHA1X1)                0.15       1.16 r
+  add_39/U1_1_3/CO (CHA1X1)                0.15       1.31 r
+  add_39/U1_1_4/S (CHA1X1)                 0.21       1.52 f
+  U32/Z (CEOX1)                            0.18       1.71 f
+  U26/Z (COR6X1)                           0.26       1.97 f
+  U35/Z (CND2X1)                           0.12       2.09 r
+  U51/Z (CIVX2)                            0.11       2.20 f
+  mem/write (mem32x9)                      0.00       2.20 f
+  mem/U25/Z (CAN3X2)                       0.17       2.37 f
+  mem/U47/Z (CND2X1)                       0.15       2.52 r
+  mem/U14/Z (CIVX2)                        0.12       2.64 f
+  mem/U214/Z (CAOR2X1)                     0.23       2.87 f
+  mem/mem_reg[31][0]/D (CFD1QXL)           0.00       2.87 f
+  data arrival time                                   2.87
+
+  clock clock (rise edge)                 10.00      10.00
+  clock network delay (propagated)         0.07      10.07
+  clock uncertainty                       -0.05      10.02
+  mem/mem_reg[31][0]/CP (CFD1QXL)          0.00      10.02 r
+  library setup time                      -0.26       9.76
+  data required time                                  9.76
+  -----------------------------------------------------------
+  data required time                                  9.76
+  data arrival time                                  -2.87
+  -----------------------------------------------------------
+  slack (MET)                                         6.89
+
+
+1

@@ -1,0 +1,436 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+              Version K-2015.06-SP5-1 for linux64 - Feb 26, 2016 
+                                        
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25
+set synthetic_library {dw_foundation.sldb standard.sldb}
+dw_foundation.sldb standard.sldb
+set_min_library /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25 -min_version /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+1
+read_verilog {fifo.v}
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading verilog file '/home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/dw_foundation.sldb'
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Compiling source file /home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v
+Warning:  /home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v:24: the undeclared symbol 'S0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v:76: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v:86: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v:111: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v:116: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+
+Inferred memory devices in process
+	in routine fifo line 71 in file
+		'/home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mem_w_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine fifo line 81 in file
+		'/home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mem_r_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine mem32x9 line 114 in file
+		'/home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  288  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   mem32x9/111    |   32   |    9    |      5       |
+======================================================
+Presto compilation completed successfully.
+Current design is now '/home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo.db:fifo'
+Loaded 2 designs.
+Current design is 'fifo'.
+fifo mem32x9
+current_design fifo
+Current design is 'fifo'.
+{fifo}
+link
+
+  Linking design 'fifo'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  tc240c (library)            /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25
+
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06-SP5-1
+Date:        Thu Apr 23 18:53:32 2020
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+--------------------------------------------------------------------------------
+
+Warning: In design 'fifo', cell 'B_7' does not drive any nets. (LINT-1)
+Warning: In design 'fifo', cell 'B_8' does not drive any nets. (LINT-1)
+1
+create_clock clock -name clock -period 10
+1
+set_propagated_clock clock
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty .05 clock
+1
+set_fix_hold clock
+1
+compile -map_effort high
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.5.1
+                                                               |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.5.1
+                                                               |     *     |
+============================================================================
+
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mem32x9'
+  Processing 'fifo'
+Information: Added key list 'DesignWare' to design 'fifo'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'fifo_DW01_inc_0'
+  Processing 'fifo_DW01_inc_1'
+  Processing 'fifo_DW01_inc_2'
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:02    3396.0      0.00       0.0       0.0                                0.00  
+    0:00:02    3396.0      0.00       0.0       0.0                                0.00  
+    0:00:02    3396.0      0.00       0.0       0.0                                0.00  
+    0:00:02    3396.0      0.00       0.0       0.0                                0.00  
+    0:00:02    3396.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2446.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2442.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+    0:00:03    2441.0      0.00       0.0       0.0                                0.00  
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+report_cell
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : cell
+Design : fifo
+Version: K-2015.06-SP5-1
+Date   : Thu Apr 23 18:53:36 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+   mo - map_only
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U21                       CAOR2X1         tc240c          2.500000  
+U22                       CAOR2X1         tc240c          2.500000  
+U23                       CAOR2X1         tc240c          2.500000  
+U24                       CAOR2X1         tc240c          2.500000  
+U25                       CAOR2X1         tc240c          2.500000  
+U26                       COR6X1          tc240c          3.500000  
+U27                       CAOR2X1         tc240c          2.500000  
+U28                       CAOR2X1         tc240c          2.500000  
+U29                       CAOR2X1         tc240c          2.500000  
+U30                       CAOR2X1         tc240c          2.500000  
+U31                       CAOR2X1         tc240c          2.500000  
+U32                       CEOX1           tc240c          2.000000  
+U33                       CEOX1           tc240c          2.000000  
+U34                       CEOX1           tc240c          2.000000  
+U35                       CND2X1          tc240c          1.000000  
+U36                       CEOX1           tc240c          2.000000  
+U37                       CEOX1           tc240c          2.000000  
+U38                       CNR2IX1         tc240c          1.500000  
+U39                       CENX1           tc240c          2.000000  
+U40                       CEOX1           tc240c          2.000000  
+U41                       CEOX1           tc240c          2.000000  
+U42                       CND4X1          tc240c          2.000000  
+U43                       CENX1           tc240c          2.000000  
+U44                       CENX1           tc240c          2.000000  
+U45                       CNR2X1          tc240c          1.000000  
+U46                       CIVX2           tc240c          1.000000  
+U47                       CEOX1           tc240c          2.000000  
+U48                       CEOX1           tc240c          2.000000  
+U49                       CIVX2           tc240c          1.000000  
+U50                       CIVX2           tc240c          1.000000  
+U51                       CIVX2           tc240c          1.000000  
+U52                       CIVX2           tc240c          1.000000  
+add_39/U1_1_1             CHA1X1          tc240c          3.500000  mo, r
+add_39/U1_1_2             CHA1X1          tc240c          3.500000  mo, r
+add_39/U1_1_3             CHA1X1          tc240c          3.500000  mo, r
+add_39/U1_1_4             CHA1X1          tc240c          3.500000  mo, r
+add_55/U1_1_1             CHA1X1          tc240c          3.500000  mo, r
+add_55/U1_1_2             CHA1X1          tc240c          3.500000  mo, r
+add_55/U1_1_3             CHA1X1          tc240c          3.500000  mo, r
+add_60/U1_1_1             CHA1X1          tc240c          3.500000  mo, r
+add_60/U1_1_2             CHA1X1          tc240c          3.500000  mo, r
+add_60/U1_1_3             CHA1X1          tc240c          3.500000  mo, r
+mem                       mem32x9                         2293.000000
+                                                                    h, n
+mem_r_reg[0]              CFD2QXL         tc240c          5.000000  n
+mem_r_reg[1]              CFD2QXL         tc240c          5.000000  n
+mem_r_reg[2]              CFD2QXL         tc240c          5.000000  n
+mem_r_reg[3]              CFD2QXL         tc240c          5.000000  n
+mem_r_reg[4]              CFD2QXL         tc240c          5.000000  n
+mem_w_reg[0]              CFD2QXL         tc240c          5.000000  n
+mem_w_reg[1]              CFD2QXL         tc240c          5.000000  n
+mem_w_reg[2]              CFD2QXL         tc240c          5.000000  n
+mem_w_reg[3]              CFD2QXL         tc240c          5.000000  n
+mem_w_reg[4]              CFD2QXL         tc240c          5.000000  n
+--------------------------------------------------------------------------------
+Total 53 cells                                            2441.000000
+1
+report_net
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+ 
+****************************************
+Report : net
+Design : fifo
+Version: K-2015.06-SP5-1
+Date   : Thu Apr 23 18:53:36 2020
+****************************************
+
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+
+Net                 Fanout     Fanin      Load   Resistance    Pins   Attributes
+--------------------------------------------------------------------------------
+N4                       2         1     24.73         0.00       3   
+N5                       1         1     17.21         0.00       2   
+N6                       1         1     17.21         0.00       2   
+N7                       1         1     17.21         0.00       2   
+N8                       1         1     17.21         0.00       2   
+N9                       1         1      7.81         0.00       2   
+N16                      1         1      7.51         0.00       2   
+N17                      1         1      7.51         0.00       2   
+N18                      1         1      7.51         0.00       2   
+N19                      1         1      7.51         0.00       2   
+N21                      1         1      7.51         0.00       2   
+N22                      1         1      7.51         0.00       2   
+N23                      1         1      7.51         0.00       2   
+N24                      1         1      7.51         0.00       2   
+N25                      1         1      7.51         0.00       2   
+add_39/carry[2]          1         1     15.12         0.00       2   
+add_39/carry[3]          1         1     15.12         0.00       2   
+add_39/carry[4]          1         1     15.12         0.00       2   
+add_55/carry[2]          1         1     15.12         0.00       2   
+add_55/carry[3]          1         1     15.12         0.00       2   
+add_55/carry[4]          1         1     18.35         0.00       2   
+add_60/carry[2]          1         1     15.12         0.00       2   
+add_60/carry[3]          1         1     15.12         0.00       2   
+add_60/carry[4]          1         1     18.35         0.00       2   
+clock                   33         1    192.30         0.00      34   
+din[0]                  32         1    248.37         0.00      33   
+din[1]                  32         1    248.37         0.00      33   
+din[2]                  32         1    248.37         0.00      33   
+din[3]                  32         1    248.37         0.00      33   
+din[4]                  32         1    248.63         0.00      33   
+din[5]                  32         1    248.63         0.00      33   
+din[6]                  32         1    248.63         0.00      33   
+din[7]                  32         1    248.63         0.00      33   
+din[8]                  32         1    248.63         0.00      33   
+dout[0]                  1         1      0.00         0.00       2   
+dout[1]                  1         1      0.00         0.00       2   
+dout[2]                  1         1      0.00         0.00       2   
+dout[3]                  1         1      0.00         0.00       2   
+dout[4]                  1         1      0.00         0.00       2   
+dout[5]                  1         1      0.00         0.00       2   
+dout[6]                  1         1      0.00         0.00       2   
+dout[7]                  1         1      0.00         0.00       2   
+dout[8]                  1         1      0.00         0.00       2   
+fullr[0]                 1         1      2.73         0.00       2   
+fullr[1]                 1         1      2.73         0.00       2   
+fullr[2]                 1         1      2.73         0.00       2   
+fullr[3]                 1         1      2.73         0.00       2   
+fullr[4]                 1         1      2.73         0.00       2   
+fullw[0]                 1         1      2.73         0.00       2   
+fullw[1]                 1         1      2.73         0.00       2   
+fullw[2]                 1         1      2.73         0.00       2   
+fullw[3]                 1         1      2.73         0.00       2   
+fullw[4]                 1         1      2.73         0.00       2   
+mem_r[0]                29         1    276.80         0.00      30   
+mem_r[1]                 7         1     94.02         0.00       8   
+mem_r[2]                 7         1     93.94         0.00       8   
+mem_r[3]                 7         1     94.23         0.00       8   
+mem_r[4]                 7         1     95.34         0.00       8   
+mem_w[0]                10         1    104.23         0.00      11   
+mem_w[1]                 9         1     88.79         0.00      10   
+mem_w[2]                 9         1     89.03         0.00      10   
+mem_w[3]                 7         1     88.22         0.00       8   
+mem_w[4]                 7         1     91.26         0.00       8   
+n14                      6         1     52.60         0.00       7   
+n15                      1         1     10.14         0.00       2   
+n16                      1         1      7.85         0.00       2   
+n17                      1         1      6.86         0.00       2   
+n18                      1         1      6.54         0.00       2   
+n19                      1         1      6.91         0.00       2   
+n20                      1         1      6.38         0.00       2   
+n21                      6         1     55.89         0.00       7   
+n22                      1         1      8.72         0.00       2   
+n23                      1         1      8.83         0.00       2   
+n24                      1         1      9.46         0.00       2   
+n25                      1         1     10.17         0.00       2   
+n26                      1         1      9.49         0.00       2   
+n27                      1         1      9.41         0.00       2   
+n29                     10         1    109.74         0.00      11   
+n30                      9         1     68.37         0.00      10   
+n31                      5         1     35.60         0.00       6   
+pin                      1         1      8.79         0.00       2   
+pout                     2         1      7.91         0.00       3   
+reset                    1         1     17.00         0.00       2   
+sin                      1         1      8.81         0.00       2   
+--------------------------------------------------------------------------------
+Total 84 nets          517        84   4349.14         0.00     601
+Maximum                 33         1    276.80         0.00      34
+Average               6.15      1.00     51.78         0.00    7.15
+1
+update_timing
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+1
+report_timing -max_paths 1 >> timing.txt
+report_area >> area.txt
+report_power >> power.txt
+write -hierarchy -format verilog -output fifo_netlist.v
+Writing verilog file '/home/014639040/EE287/Assignment/HW-Synthesis/Manual_scan_FIFO/fifo_noscan/fifo_netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+quit
+
+Thank you...

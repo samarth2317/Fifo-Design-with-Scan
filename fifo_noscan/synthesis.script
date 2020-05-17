@@ -1,0 +1,21 @@
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+set synthetic_library {dw_foundation.sldb standard.sldb}
+set_min_library /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25 -min_version /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+read_verilog {fifo.v}
+current_design fifo
+link
+check_design
+create_clock clock -name clock -period 10
+set_propagated_clock clock
+set_clock_uncertainty .05 clock
+set_fix_hold clock
+compile -map_effort high
+report_cell
+report_net
+update_timing
+report_timing -max_paths 1 >> timing.txt
+report_area >> area.txt
+report_power >> power.txt
+write -hierarchy -format verilog -output fifo_netlist.v
+quit

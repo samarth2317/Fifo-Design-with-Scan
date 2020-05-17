@@ -1,0 +1,76 @@
+Power
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+NOSCAN
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+Global Operating Voltage = 2.5  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =   4.4492 mW   (86%)
+  Net Switching Power  = 695.9701 uW   (14%)
+                         ---------
+Total Dynamic Power    =   5.1452 mW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000               NA   (     N/A)
+memory             0.0000            0.0000            0.0000               NA   (     N/A)
+black_box          0.0000            0.0000            0.0000               NA   (     N/A)
+clock_network    476.1001          540.0000            0.0000               NA   (     N/A)
+register       3.5612e+03           38.6320            0.0000               NA   (     N/A)
+sequential         0.0000            0.0000            0.0000               NA   (     N/A)
+combinational    411.8810          117.3382            0.0000               NA   (     N/A)
+--------------------------------------------------------------------------------------------------
+Total          4.4492e+03 uW       695.9702 uW         0.0000               NA        
+
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+SCAN
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Global Operating Voltage = 2.5  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =   4.4415 mW   (86%)
+  Net Switching Power  = 715.6122 uW   (14%)
+                         ---------
+Total Dynamic Power    =   5.1571 mW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+Error: Either dynamic power or leakage power, in the library, is unitless. Unable to display complete power group summary. (PWR-799)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000               NA   (     N/A)
+memory             0.0000            0.0000            0.0000               NA   (     N/A)
+black_box          0.0000            0.0000            0.0000               NA   (     N/A)
+clock_network    476.1001          540.0000            0.0000               NA   (     N/A)
+register       3.5626e+03           37.1968            0.0000               NA   (     N/A)
+sequential         0.0000            0.0000            0.0000               NA   (     N/A)
+combinational    402.7137          138.4156            0.0000               NA   (     N/A)
+--------------------------------------------------------------------------------------------------
+Total          4.4415e+03 uW       715.6124 uW         0.0000               NA        
+
+
+
